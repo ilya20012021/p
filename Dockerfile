@@ -1,9 +1,9 @@
-FROM python:3-onbuild
+FROM python:3
+ADD server.py /
+CMD [ "python", "./server.py" ]
 
-EXPOSE 5000
+ADD send.py /
+CMD [ "python", "./send.py" ]
 
-CMD ["python", "./get.py"]
-
-CMD ["python", "./send.py"]
-
-CMD ["python", "./server.py"]
+ADD get.py /
+CMD [ "python", "./get.py" ]
