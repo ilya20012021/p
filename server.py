@@ -15,7 +15,7 @@ class JSONEncoder(json.JSONEncoder):
 
 
 def connect_to_mongodb():
-    client = MongoClient('mongodb://localhost:27017/', username='EmployeeAdmin')
+    client = MongoClient('mongodb://localhost:27017/', username='my-user')
     return client.dbdbd_db
 
 
@@ -72,4 +72,4 @@ def GetMessage():
     }
 
 
-app.run()
+app.run(host='0.0.0.0')
